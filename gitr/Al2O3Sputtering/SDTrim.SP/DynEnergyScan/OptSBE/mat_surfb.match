@@ -1,0 +1,9 @@
+matrix of surface-bindig-energy [eV] ---text
+ 3       ---number of elements
+1  D   ---Z, symbol for check of input
+13  Al   ---Z, symbol for check of input
+8  O   ---Z, symbol for check of input
+  D         Al         O
+0.0000     0.0000     0.0000 for D
+0.0000     10.0000    0.000 for Al
+0.0000     5.0000     4.0000 for O

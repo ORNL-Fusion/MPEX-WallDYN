@@ -1,0 +1,728 @@
+This is WallDYN using C++ and pyWallDYN generated equations, C2017 K. Schmid
+Current working directory:
+	"/home/cloud/code/pyWallDYN/GITR_Coupling/cases/D_N_Al_W"
+Command line argument listing:
+	Argument 0: /home/cloud/code/pyWallDYN/setupMPI/release/walldyn_setup_MPI
+	Argument 1: --input
+	Argument 2: GITR_ProtoEmpex_W_N_Al.xml
+	Argument 3: --wtd
+	Argument 4: modelandruntime
+	Argument 5: --minfloat
+	Argument 6: 1.0E-14
+	Argument 7: --valjac
+	Argument 8: 0
+	Argument 9: --verbostiy
+	Argument 10: 0
+	Argument 11: --compress
+	Argument 12: 0
+	Argument 13: --dolsys
+	Argument 14: 0
+Storing output files at 
+Initial flux linear system will NOT be generated
+Generating raw, uncompressed XML
+Syncing string representations every 100000 string to conserve memory on non root nodes
+NOT validating jacobian expressions
+This is a RELEASE build!
+	verbostiy level 0
+Generating WallDYN model from GITR_ProtoEmpex_W_N_Al.xml
+INFO->No linear system generation requested@NODE 3 >> Start parsing XML input
+Parsed ElementData resulting in 4 elements
+	INFO::Sequence of accumulating elements:
+		WallDYN accumulating element number 0 with ID 1 name al
+		WallDYN accumulating element number 1 with ID 2 name n
+		WallDYN accumulating element number 2 with ID 3 name w
+Parsed a WDWallModel2D entry with 94 wall tiles
+Parsed per wall data for 94 wall tiles
+Parsed IRedepModel ConstantWallPlasmaModel 
+Parsed WDTimeDepTableFunc for 0 tables
+Parsed WDSurfaceModelRZBulk1 surface model matrix for 4 elements on 94 wall tiles
+Parsed WDEnergyModelSheath for element 0
+Parsed WDEnergyModelSheath for element 1
+Parsed WDEnergyModelSheath for element 2
+Parsed WDEnergyModelSheath for element 3
+INFO-->WDRedeposition::ParseXML->Using numeric (not symbolic) redeposition matrix values
+Parsed redep matrix for element #1 with 4 charge states
+Parsed redep matrix for element #2 with 4 charge states
+Parsed redep matrix for element #3 with 4 charge states
+Parsed redep matrix for 3 elements
+Parsed IRedepModel WDRedeposition1 
+INFO::sylddbentry4->Storing projectile d <-> WDID 0 / target al <-> WDID 1
+INFO::sylddbentry4->Storing projectile d <-> WDID 0 / target n <-> WDID 2
+INFO::sylddbentry4->Storing projectile d <-> WDID 0 / target w <-> WDID 3
+INFO::sylddbentry4->Storing projectile al <-> WDID 1 / target al <-> WDID 1
+INFO::sylddbentry4->Storing projectile al <-> WDID 1 / target n <-> WDID 2
+INFO::sylddbentry4->Storing projectile al <-> WDID 1 / target w <-> WDID 3
+INFO::sylddbentry4->Storing projectile n <-> WDID 2 / target al <-> WDID 1
+INFO::sylddbentry4->Storing projectile n <-> WDID 2 / target n <-> WDID 2
+INFO::sylddbentry4->Storing projectile n <-> WDID 2 / target w <-> WDID 3
+INFO::sylddbentry4->Storing projectile w <-> WDID 3 / target al <-> WDID 1
+INFO::sylddbentry4->Storing projectile w <-> WDID 3 / target n <-> WDID 2
+INFO::sylddbentry4->Storing projectile w <-> WDID 3 / target w <-> WDID 3
+INFO::sylddbentry4->Accumulating element number 0 in simulation corresponds to target element number 0 (al) in the sputter db
+INFO::sylddbentry4->Accumulating element number 1 in simulation corresponds to target element number 1 (n) in the sputter db
+INFO::sylddbentry4->Accumulating element number 2 in simulation corresponds to target element number 2 (w) in the sputter db
+Parsed ISYieldModel WDSYieldModel4
+INFO::rylddbentry4->Storing projectile d <-> WDID 0
+INFO::rylddbentry4->Storing projectile al <-> WDID 1
+INFO::rylddbentry4->Storing projectile n <-> WDID 2
+INFO::rylddbentry4->Storing projectile w <-> WDID 3
+Parsed IReflModel WDRYieldModel4@NODE 3 >> Completed parsing XML input
+Merge targets with sputter & reflection models:
+	Element #1 using erosion model WDSYieldModel4
+	Element #2 using erosion model WDSYieldModel4
+	Element #3 using erosion model WDSYieldModel4
+	Element #1 using reflection model WDRYieldModel4
+	Element #2 using reflection model WDRYieldModel4
+	Element #3 using reflection model WDRYieldModel4
+WallDYN accumulating element #0 = al matches accumulating element #0 = al from  model WDSYieldModel4
+WallDYN accumulating element #1 = n matches accumulating element #1 = n from  model WDSYieldModel4
+WallDYN accumulating element #2 = w matches accumulating element #2 = w from  model WDSYieldModel4
+Element d has the same WallDYN ID 0 in the model WDSYieldModel4Element al has the same WallDYN ID 1 in the model WDSYieldModel4Element n has the same WallDYN ID 2 in the model WDSYieldModel4Element w has the same WallDYN ID 3 in the model WDSYieldModel4WallDYN accumulating element #0 = al matches accumulating element #0 = al from  model WDRYieldModel4
+WallDYN accumulating element #1 = n matches accumulating element #1 = n from  model WDRYieldModel4
+WallDYN accumulating element #2 = w matches accumulating element #2 = w from  model WDRYieldModel4
+Element d has the same WallDYN ID 0 in the model WDRYieldModel4Element al has the same WallDYN ID 1 in the model WDRYieldModel4Element n has the same WallDYN ID 2 in the model WDRYieldModel4Element w has the same WallDYN ID 3 in the model WDRYieldModel4WallDYN accumulating element #0 = al matches accumulating element #0 = al from  model WDSYieldModel4
+WallDYN accumulating element #1 = n matches accumulating element #1 = n from  model WDSYieldModel4
+WallDYN accumulating element #2 = w matches accumulating element #2 = w from  model WDSYieldModel4
+Element d has the same WallDYN ID 0 in the model WDSYieldModel4Element al has the same WallDYN ID 1 in the model WDSYieldModel4Element n has the same WallDYN ID 2 in the model WDSYieldModel4Element w has the same WallDYN ID 3 in the model WDSYieldModel4WallDYN accumulating element #0 = al matches accumulating element #0 = al from  model WDRYieldModel4
+WallDYN accumulating element #1 = n matches accumulating element #1 = n from  model WDRYieldModel4
+WallDYN accumulating element #2 = w matches accumulating element #2 = w from  model WDRYieldModel4
+Element d has the same WallDYN ID 0 in the model WDRYieldModel4Element al has the same WallDYN ID 1 in the model WDRYieldModel4Element n has the same WallDYN ID 2 in the model WDRYieldModel4Element w has the same WallDYN ID 3 in the model WDRYieldModel4WallDYN accumulating element #0 = al matches accumulating element #0 = al from  model WDSYieldModel4
+WallDYN accumulating element #1 = n matches accumulating element #1 = n from  model WDSYieldModel4
+WallDYN accumulating element #2 = w matches accumulating element #2 = w from  model WDSYieldModel4
+Element d has the same WallDYN ID 0 in the model WDSYieldModel4Element al has the same WallDYN ID 1 in the model WDSYieldModel4Element n has the same WallDYN ID 2 in the model WDSYieldModel4Element w has the same WallDYN ID 3 in the model WDSYieldModel4WallDYN accumulating element #0 = al matches accumulating element #0 = al from  model WDRYieldModel4
+WallDYN accumulating element #1 = n matches accumulating element #1 = n from  model WDRYieldModel4
+WallDYN accumulating element #2 = w matches accumulating element #2 = w from  model WDRYieldModel4
+Element d has the same WallDYN ID 0 in the model WDRYieldModel4Element al has the same WallDYN ID 1 in the model WDRYieldModel4Element n has the same WallDYN ID 2 in the model WDRYieldModel4Element w has the same WallDYN ID 3 in the model WDRYieldModel4				Handling WDRedeposition::build_dynflux_list()
+				build_dynflux_list() Completed
+Building Composition ODE for 3 elements and flux linear system with dimension 12
+Node 3 handling wall elements from 69 to 93
+	@NODE 3 >> ErosionFlux Complete of element al on wall 69
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 69
+	@NODE 3 >> ErosionFlux Complete of element n on wall 69
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 69
+	@NODE 3 >> ErosionFlux Complete of element w on wall 69
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 69
+	@NODE 3 >> ErosionFlux Complete of element al on wall 70
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 70
+	@NODE 3 >> ErosionFlux Complete of element n on wall 70
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 70
+	@NODE 3 >> ErosionFlux Complete of element w on wall 70
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 70
+	@NODE 3 >> ErosionFlux Complete of element al on wall 71
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 71
+	@NODE 3 >> ErosionFlux Complete of element n on wall 71
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 71
+	@NODE 3 >> ErosionFlux Complete of element w on wall 71
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 71
+	@NODE 3 >> ErosionFlux Complete of element al on wall 72
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 72
+	@NODE 3 >> ErosionFlux Complete of element n on wall 72
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 72
+	@NODE 3 >> ErosionFlux Complete of element w on wall 72
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 72
+	@NODE 3 >> ErosionFlux Complete of element al on wall 73
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 73
+	@NODE 3 >> ErosionFlux Complete of element n on wall 73
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 73
+	@NODE 3 >> ErosionFlux Complete of element w on wall 73
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 73
+	@NODE 3 >> ErosionFlux Complete of element al on wall 74
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 74
+	@NODE 3 >> ErosionFlux Complete of element n on wall 74
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 74
+	@NODE 3 >> ErosionFlux Complete of element w on wall 74
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 74
+	@NODE 3 >> ErosionFlux Complete of element al on wall 75
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 75
+	@NODE 3 >> ErosionFlux Complete of element n on wall 75
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 75
+	@NODE 3 >> ErosionFlux Complete of element w on wall 75
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 75
+	@NODE 3 >> ErosionFlux Complete of element al on wall 76
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 76
+	@NODE 3 >> ErosionFlux Complete of element n on wall 76
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 76
+	@NODE 3 >> ErosionFlux Complete of element w on wall 76
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 76
+	@NODE 3 >> ErosionFlux Complete of element al on wall 77
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 77
+	@NODE 3 >> ErosionFlux Complete of element n on wall 77
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 77
+	@NODE 3 >> ErosionFlux Complete of element w on wall 77
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 77
+	@NODE 3 >> ErosionFlux Complete of element al on wall 78
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 78
+	@NODE 3 >> ErosionFlux Complete of element n on wall 78
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 78
+	@NODE 3 >> ErosionFlux Complete of element w on wall 78
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 78
+	@NODE 3 >> ErosionFlux Complete of element al on wall 79
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 79
+	@NODE 3 >> ErosionFlux Complete of element n on wall 79
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 79
+	@NODE 3 >> ErosionFlux Complete of element w on wall 79
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 79
+	@NODE 3 >> ErosionFlux Complete of element al on wall 80
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 80
+	@NODE 3 >> ErosionFlux Complete of element n on wall 80
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 80
+	@NODE 3 >> ErosionFlux Complete of element w on wall 80
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 80
+	@NODE 3 >> ErosionFlux Complete of element al on wall 81
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 81
+	@NODE 3 >> ErosionFlux Complete of element n on wall 81
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 81
+	@NODE 3 >> ErosionFlux Complete of element w on wall 81
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 81
+	@NODE 3 >> ErosionFlux Complete of element al on wall 82
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 82
+	@NODE 3 >> ErosionFlux Complete of element n on wall 82
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 82
+	@NODE 3 >> ErosionFlux Complete of element w on wall 82
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 82
+	@NODE 3 >> ErosionFlux Complete of element al on wall 83
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 83
+	@NODE 3 >> ErosionFlux Complete of element n on wall 83
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 83
+	@NODE 3 >> ErosionFlux Complete of element w on wall 83
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 83
+	@NODE 3 >> ErosionFlux Complete of element al on wall 84
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 84
+	@NODE 3 >> ErosionFlux Complete of element n on wall 84
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 84
+	@NODE 3 >> ErosionFlux Complete of element w on wall 84
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 84
+	@NODE 3 >> ErosionFlux Complete of element al on wall 85
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 85
+	@NODE 3 >> ErosionFlux Complete of element n on wall 85
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 85
+	@NODE 3 >> ErosionFlux Complete of element w on wall 85
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 85
+	@NODE 3 >> ErosionFlux Complete of element al on wall 86
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 86
+	@NODE 3 >> ErosionFlux Complete of element n on wall 86
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 86
+	@NODE 3 >> ErosionFlux Complete of element w on wall 86
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 86
+	@NODE 3 >> ErosionFlux Complete of element al on wall 87
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 87
+	@NODE 3 >> ErosionFlux Complete of element n on wall 87
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 87
+	@NODE 3 >> ErosionFlux Complete of element w on wall 87
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 87
+	@NODE 3 >> ErosionFlux Complete of element al on wall 88
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 88
+	@NODE 3 >> ErosionFlux Complete of element n on wall 88
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 88
+	@NODE 3 >> ErosionFlux Complete of element w on wall 88
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 88
+	@NODE 3 >> ErosionFlux Complete of element al on wall 89
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 89
+	@NODE 3 >> ErosionFlux Complete of element n on wall 89
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 89
+	@NODE 3 >> ErosionFlux Complete of element w on wall 89
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 89
+	@NODE 3 >> ErosionFlux Complete of element al on wall 90
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 90
+	@NODE 3 >> ErosionFlux Complete of element n on wall 90
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 90
+	@NODE 3 >> ErosionFlux Complete of element w on wall 90
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 90
+	@NODE 3 >> ErosionFlux Complete of element al on wall 91
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 91
+	@NODE 3 >> ErosionFlux Complete of element n on wall 91
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 91
+	@NODE 3 >> ErosionFlux Complete of element w on wall 91
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 91
+	@NODE 3 >> ErosionFlux Complete of element al on wall 92
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 92
+	@NODE 3 >> ErosionFlux Complete of element n on wall 92
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 92
+	@NODE 3 >> ErosionFlux Complete of element w on wall 92
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 92
+	@NODE 3 >> ErosionFlux Complete of element al on wall 93
+	@NODE 3 >> ReflectedFlux Complete of element al on wall 93
+	@NODE 3 >> ErosionFlux Complete of element n on wall 93
+	@NODE 3 >> ReflectedFlux Complete of element n on wall 93
+	@NODE 3 >> ErosionFlux Complete of element w on wall 93
+	@NODE 3 >> ReflectedFlux Complete of element w on wall 93
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 69
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 69
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 69
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 69
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 69
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 69
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 69
+		@NODE 3 >>Last wall element took 14.496 (ms) for 0 non-zero elements-> ETA: ~ 347.914 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 70
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 70
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 70
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 70
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 70
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 70
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 70
+		@NODE 3 >>Last wall element took 13.331 (ms) for 0 non-zero elements-> ETA: ~ 306.624 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 71
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 71
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 71
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 71
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 71
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 71
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 71
+		@NODE 3 >>Last wall element took 13.677 (ms) for 0 non-zero elements-> ETA: ~ 300.894 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 72
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 72
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 72
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 72
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 72
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 72
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 72
+		@NODE 3 >>Last wall element took 12.845 (ms) for 0 non-zero elements-> ETA: ~ 269.743 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 73
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 73
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 73
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 73
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 73
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 73
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 73
+		@NODE 3 >>Last wall element took 12.484 (ms) for 0 non-zero elements-> ETA: ~ 249.676 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 74
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 74
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 74
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 74
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 74
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 74
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 74
+		@NODE 3 >>Last wall element took 12.364 (ms) for 0 non-zero elements-> ETA: ~ 234.907 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 75
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 75
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 75
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 75
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 75
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 75
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 75
+		@NODE 3 >>Last wall element took 12.637 (ms) for 0 non-zero elements-> ETA: ~ 227.466 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 76
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 76
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 76
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 76
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 76
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 76
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 76
+		@NODE 3 >>Last wall element took 12.417 (ms) for 0 non-zero elements-> ETA: ~ 211.091 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 77
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 77
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 77
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 77
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 77
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 77
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 77
+		@NODE 3 >>Last wall element took 13.136 (ms) for 0 non-zero elements-> ETA: ~ 210.179 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 78
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 78
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 78
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 78
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 78
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 78
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 78
+		@NODE 3 >>Last wall element took 13.439 (ms) for 0 non-zero elements-> ETA: ~ 201.591 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 79
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 79
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 79
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 79
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 79
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 79
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 79
+		@NODE 3 >>Last wall element took 13.046 (ms) for 0 non-zero elements-> ETA: ~ 182.650 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 80
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 80
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 80
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 80
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 80
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 80
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 80
+		@NODE 3 >>Last wall element took 12.588 (ms) for 0 non-zero elements-> ETA: ~ 163.643 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 81
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 81
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 81
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 81
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 81
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 81
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 81
+		@NODE 3 >>Last wall element took 12.798 (ms) for 0 non-zero elements-> ETA: ~ 153.572 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 82
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 82
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 82
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 82
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 82
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 82
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 82
+		@NODE 3 >>Last wall element took 12.669 (ms) for 0 non-zero elements-> ETA: ~ 139.361 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 83
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 83
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 83
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 83
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 83
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 83
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 83
+		@NODE 3 >>Last wall element took 12.626 (ms) for 0 non-zero elements-> ETA: ~ 126.264 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 84
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 84
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 84
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 84
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 84
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 84
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 84
+		@NODE 3 >>Last wall element took 12.557 (ms) for 0 non-zero elements-> ETA: ~ 113.011 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 85
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 85
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 85
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 85
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 85
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 85
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 85
+		@NODE 3 >>Last wall element took 13.031 (ms) for 0 non-zero elements-> ETA: ~ 104.251 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 86
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 86
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 86
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 86
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 86
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 86
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 86
+		@NODE 3 >>Last wall element took 13.584 (ms) for 0 non-zero elements-> ETA: ~ 95.088 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 87
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 87
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 87
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 87
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 87
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 87
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 87
+		@NODE 3 >>Last wall element took 12.488 (ms) for 0 non-zero elements-> ETA: ~ 74.927 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 88
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 88
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 88
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 88
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 88
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 88
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 88
+		@NODE 3 >>Last wall element took 12.550 (ms) for 0 non-zero elements-> ETA: ~ 62.750 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 89
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 89
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 89
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 89
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 89
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 89
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 89
+		@NODE 3 >>Last wall element took 12.428 (ms) for 0 non-zero elements-> ETA: ~ 49.713 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 90
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 90
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 90
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 90
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 90
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 90
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 90
+		@NODE 3 >>Last wall element took 17.867 (ms) for 0 non-zero elements-> ETA: ~ 53.602 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 91
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 91
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 91
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 91
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 91
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 91
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 91
+		@NODE 3 >>Last wall element took 17.160 (ms) for 0 non-zero elements-> ETA: ~ 34.319 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 92
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 92
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 92
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 92
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 92
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 92
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 92
+		@NODE 3 >>Last wall element took 12.879 (ms) for 0 non-zero elements-> ETA: ~ 12.879 (ms) 
+	@NODE 3 >> ADensResiduumODE Complete of element al on wall 93
+	@NODE 3 >> SFCResiduumODE Complete of element al on wall 93
+	@NODE 3 >> ADensResiduumODE Complete of element n on wall 93
+	@NODE 3 >> SFCResiduumODE Complete of element n on wall 93
+	@NODE 3 >> ADensResiduumODE Complete of element w on wall 93
+	@NODE 3 >> SFCResiduumODE Complete of element w on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element al on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element al on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element al on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element al on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element n on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element n on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element n on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element n on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 0 of element w on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 1 of element w on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 2 of element w on wall 93
+		@NODE 3 >> BuildFluxExpressions completed Charge 3 of element w on wall 93
+		@NODE 3 >>Last wall element took 10.363 (ms) for 0 non-zero elements-> ETA: ~ 0.000 (ms) 
+		@NODE 3 >> BuildFluxExpressions yielded 0 non zero matrix entries compared to 1272384 possible matrix entries
+@NODE 3 >>>>>>>>> Equation setup complete (517.379 (ms)) <<<<<<<<<<<<<<<
+@NODE 3 Compressing string representations in linear system only
+@NODE 3 Skipping linear system setup
+@NODE: 3 >> walldyn_setup (WTD: MODEL & RUNTIME) returned with code 0 after 2.14720 (sec.)

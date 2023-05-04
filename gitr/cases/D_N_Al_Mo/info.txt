@@ -1,0 +1,2 @@
+Based on ../data_o_al/ but used an Mo based target appyling the new yield database in 
+../../yieldmodel_4/BlinSPLINEDB_D_Al_N_Mo_Al_N_Mo

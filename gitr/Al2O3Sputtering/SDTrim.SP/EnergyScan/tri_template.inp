@@ -1,0 +1,50 @@
+D -> Al2O3
+&TRI_INP
+
+text='elements'
+	ncp		= 	3
+	symbol	= 	"D", "Al", "O"
+
+	flc		=	100
+	nh		=	10000
+	idout	=	1000
+	nr_pproj=	8
+
+	ipot	=	1
+	isbv	= 	6
+	inel0 = 3, 3, 3
+
+	dns0 = 0.06, 0.117695, 0.117695
+
+text='beam'
+	qubeam	=	1, 0, 0
+	qumax	=	0, 1, 1
+
+	case_e0	=	0
+	e0 = 100, 0, 0
+	e_cutoff= 2, 2, 2
+
+	case_alpha=	0
+	alpha0	=	0, 0, 0
+
+text='target'
+	idrel	=	1
+	nm		=	3
+	ttarget	=	1000
+	nqx		=	500
+	qu		=	0.0, 0.4, 0.6
+	iq0		=	0
+
+	rhom=-2.0
+
+
+  lmatrices=.false.
+  lparticle_p=.false.
+  lparticle_r=.false.
+  ltraj_p=.false.
+  ltraj_r=.false.
+  tableinp="/home/korcslayer/work/RPP/Programs/SDTrimSP_6.00/tables"
+  text='tableinp="/home/korcslayer/work/RPP/Programs/SDTrimSP_6.00/tables"'
+  text='tableinp="D:\SklUserData\work\RPP\Programs\SDTRIM.SP 5.07\tables\"'
+	nm = -1
+/

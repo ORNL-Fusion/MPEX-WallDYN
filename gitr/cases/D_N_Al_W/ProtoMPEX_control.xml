@@ -1,0 +1,6 @@
+<SOLVERCONFIG>
+  <TMAX val="100.0"/>
+  <IDASolver testjacfdd="False" linsolver="IDASuperLUMT" IDASetMaxNumSteps="DEFAULT" IDASetInitStep="DEFAULT" IDASetErrFile="IDA_ERROR_LOG.log"/>
+  <OutputAt basefile="./results/ProtoMPEX.dat" storesteps="1">0.1, 1, 5, 10, 20, 50, 100</OutputAt>
+  <IDACalcIC tout="0.001" IDASetNonlinConvCoefIC="DEFAULT" IDASetMaxNumStepsIC="DEFAULT" IDASetMaxNumJacsIC="DEFAULT" IDASetMaxNumItersIC="DEFAULT" IDASetMaxBacksIC="DEFAULT" IDASetLineSearchOffIC="DEFAULT" IDASetStepToleranceIC="DEFAULT"/>
+</SOLVERCONFIG>
