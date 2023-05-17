@@ -33,16 +33,17 @@ print("n_atom = ", n_atom[0].shape)
 n_mol = Trineuts['m'].item()['n'][:, indAtom]
 print("n_mol = ", n_mol[0].shape)
 
-# print("Z = ", Z[0][:,-1])
-# import matplotlib.pyplot as plt
-# plt.plot(Z[0][:,-1], ne[0][:,-1], label='ne')
-# # # plt.plot(Z, te, label='te')
-# plt.show()
+print("Z = ", Z[0][:,-1])
+import matplotlib.pyplot as plt
+#plt.plot(Z[0][:,-1], ne[0][:,-1], label='ne')
+plt.plot(Z[0][:,-1], B[0][:,-1], label='ne')
+# # plt.plot(Z, te, label='te')
+plt.show()
 
-# Neutral data on B2 grid
-# % %%%Neutral data on B2 grid 
-mat_contents_B2 = sio.loadmat('/Users/42d/MPEX-GITR-WallDYN/solpsData/dab2.mat')
-# n_atom_B2 =load('/Users/42d/MPEX-GITR-WallDYN/dab2.mat'); %%uploaded on github
-# % n_mol_B2 =load('/Users/42d/MPEX-GITR-WallDYN/dmb2.mat');
-# % T_atom_B2 = load('/Users/42d/MPEX-GITR-WallDYN/tab2.mat');
-# % T_mol_B2 = load('/Users/42d/MPEX-GITR-WallDYN/tmb2.mat');
+## Neutral data on B2 grid
+## % %%%Neutral data on B2 grid
+#mat_contents_B2 = sio.loadmat('/Users/42d/MPEX-GITR-WallDYN/solpsData/dab2.mat')
+## n_atom_B2 =load('/Users/42d/MPEX-GITR-WallDYN/dab2.mat'); %%uploaded on github
+## % n_mol_B2 =load('/Users/42d/MPEX-GITR-WallDYN/dmb2.mat');
+## % T_atom_B2 = load('/Users/42d/MPEX-GITR-WallDYN/tab2.mat');
+## % T_mol_B2 = load('/Users/42d/MPEX-GITR-WallDYN/tmb2.mat');
