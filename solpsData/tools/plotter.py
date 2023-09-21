@@ -2,6 +2,7 @@
 # Plot the SOLPS data from the MATLAB file
 import matplotlib.pyplot as plt
 import netCDF4 as nc
+import numpy as np 
 from  solpsParser import solps_data
 # Load the netCDF data
 
@@ -18,13 +19,19 @@ u_fluid_neutral = parsed_data['u_fluid_neutral']
 u_deuterium_par = parsed_data['u_deuterium_par']
 ni_neutral = parsed_data['ni_neutral']
 ni_deuterium = parsed_data['ni_deuterium']
-B = parsed_data['B'][0][:, :, -1]
+# B = parsed_data['B'][0][:, :, -1]
 R_ = parsed_data['R']
 x= R_
 
-br = B
-bz = B
+# br = B
+# bz = B
 
+print(min(np.unique(z)), max(np.unique(z)))
+print(min(np.unique(x)), max(np.unique(x)))
+
+print("solps", x.shape)
+
+exit()
 #print("z", z)
 #exit()
 # 2D plot
