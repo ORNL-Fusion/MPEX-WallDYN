@@ -7,6 +7,8 @@ import os
 
 
 filename="gitrGeometryPointPlane3d.cfg"
+filename="../../gitr/input/gitrGeometryPointPlane3d.cfg"
+
 with io.open(filename) as f:
  config = libconf.load(f)
 
