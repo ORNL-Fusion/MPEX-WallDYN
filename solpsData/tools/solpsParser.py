@@ -32,6 +32,7 @@ def solps_data(mat_file_path):
     u_deuterium_par = ui[0][:, :, 1]  # Deuterium parallel flow velocity
     ni_neutral = ni[0][:, :, 0]  # Neutral densities
     ni_deuterium = ni[0][:, :, 1]  # Deuterium densities
+    magnetic_field = geo_data['bb'][:, 0]  # Magnetic field values
     
 # shifted_z_values = z_values + 0.5 ( see Sahinul SOLPS-ITER paper)
     z_values = z_values + 0.5
@@ -45,7 +46,8 @@ def solps_data(mat_file_path):
         'u_fluid_neutral': u_fluid_neutral,
         'u_deuterium_par': u_deuterium_par,
         'ni_neutral': ni_neutral,
-        'ni_deuterium': ni_deuterium
+        'ni_deuterium': ni_deuterium,
+        'B': magnetic_field
     }
     
     return data

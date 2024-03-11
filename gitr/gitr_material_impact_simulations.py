@@ -52,11 +52,11 @@ def update_species_properties(filename, impurity_species, background_species, ce
         print(f"Error updating species properties: {e}")
 
 # Testing the function
-BASE_PATH = "/Users/42d/GITR-1.3.0/build/"
-OUTPUT_PATH = "/Users/42d/MPEX-GITR-WallDYN/gitr/output"
+BASE_PATH = "/Users/42d/GITR/build"
+OUTPUT_PATH = "/Users/42d/MPEX-WallDYN/gitr/output"
 FILENAME = "/Users/42d/MPEX-GITR-WallDYN/gitr/input/gitrInput.cfg"
 MATERIALS = [deuterium, aluminum, nitrogen, tungsten]
-
+MATERIALS = [aluminum]
 for material in MATERIALS:
     for cell_index in range(1, 95):
         update_species_properties(FILENAME, material, deuterium, cell_index)

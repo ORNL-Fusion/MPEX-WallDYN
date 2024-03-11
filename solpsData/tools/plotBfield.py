@@ -1,20 +1,27 @@
 # Plot the SOLPS data from the MATLAB file
 import matplotlib.pyplot as plt
-import netCDF4 as nc
+from  solpsParser import solps_data
 
 # Load the netCDF data
-data = nc.Dataset('/Users/42d/Downloads/profilesProtoMPEX_base.nc', 'r', format='NETCDF4')
-x = data.variables['x'][:]
-z = data.variables['z'][:]
-ni = data.variables['ni'][:]
-te = data.variables['te'][:]
-ti = data.variables['ti'][:]
-vr = data.variables['vr'][:]
-vt = data.variables['vt'][:]
-vz = data.variables['vz'][:]
-br = data.variables['br'][:]
-bt = data.variables['bt'][:]
-bz = data.variables['bz'][:]
+mat_file_path = '../solpsData/SOLPS_09092023/matlab_SOLPS.mat'
+parsed_data = solps_data(mat_file_path)
+
+# read in data
+z = parsed_data['Z'][0]
+ne = parsed_data['ne']
+te = parsed_data['te']
+ti = parsed_data['ti']
+ni = parsed_data['ni'][0][:, :, 1]
+u_fluid_neutral = parsed_data['u_fluid_neutral']
+u_deuterium_par = parsed_data['u_deuterium_par']
+ni_neutral = parsed_data['ni_neutral']
+ni_deuterium = parsed_data['ni_deuterium']
+B = parsed_data['B'][0][:, :, -1]
+R_ = parsed_data['R']
+x= R_
+
+br = B
+bz = B
 
 # get 1 d br 
 import numpy as np 
